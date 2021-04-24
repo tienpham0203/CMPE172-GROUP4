@@ -1,0 +1,39 @@
+form1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.a1{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 70px;
+}
+
+.a2{
+    
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.select-label{
+    color: rgb(62, 62, 119);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    background-color: rgb(18, 91, 209);
+    font-size: 16px;
+    padding:15p 30px;
+    color: white ;
+    width: 100px;
+}
