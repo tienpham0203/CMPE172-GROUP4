@@ -36,6 +36,7 @@ public class GridFSDemo {
         // Create a GridFS collection in the database object  
         GridFS gridFS= new GridFS(db,collectionName);         
 
+	  /**Commented lines are responsible for adding the data**/
 //        // Create a test file, mongo exists by default  
 //        File file=new File("/Users/jinghuing/Downloads/newMP3sample.mp3");  
 //        FileInputStream fileInputStream=new FileInputStream(file);  
