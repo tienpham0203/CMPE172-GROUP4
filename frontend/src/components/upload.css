@@ -4,11 +4,11 @@ form1{
     justify-content: center;
 }
 .a1{
+    color: blue;
     display: flex;
-    flex-flow: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 70px;
+    
 }
 
 .a2{
@@ -31,9 +31,22 @@ form1{
     justify-content: center;
 }
 .button{
-    background-color: rgb(18, 91, 209);
+    background-color: rgb(42, 45, 207);
     font-size: 16px;
     padding:15p 30px;
     color: white ;
     width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containter{
+    background-color: rgb(42, 45, 207);
+    font-size: 16px;
+    padding:15p 30px;
+    color: white ;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

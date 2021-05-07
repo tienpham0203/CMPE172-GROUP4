@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import DisplayResult from './components/DisplayResult'
+import Upload from './components/Upload'
+import Welcome from './components/Welcome'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './bootstrap.css';
 import './app.css';
-import UploadToS3 from './components/UploadToS3';
 
-import FileUpload from './components/file_upload/FileUpload';
+import UploadToS3 from './components/UploadToS3';
 class App extends Component {
   render() {
     return (
@@ -16,11 +19,15 @@ class App extends Component {
 class MyComponents extends Component {
   render() {
     return (
-      <div className="MyCoponents">
-        <div className="MyCoponents">  
-                 <UploadToS3/>      
-      </div>
-
+      <div className="MyCoponents">    
+                
+       <Router>
+      <>
+      <Route path="/" exact component={UploadToS3}/>
+      
+      </>
+        </Router>
+        
       </div>
 
     );
@@ -29,5 +36,3 @@ class MyComponents extends Component {
 
 
 export default App;
-
-
