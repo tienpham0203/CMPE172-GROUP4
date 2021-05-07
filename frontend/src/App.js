@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import DisplayResult from './components/DisplayResult'
-import Upload from './components/Upload'
-import Welcome from './components/Welcome'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './bootstrap.css';
 import './app.css';
@@ -19,15 +16,18 @@ class App extends Component {
 class MyComponents extends Component {
   render() {
     return (
-      <div className="MyCoponents">    
+      <div className="MyCoponents">
+         
                 
        <Router>
       <>
       <Route path="/" exact component={UploadToS3}/>
-      
+    
+   
       </>
-        </Router>
-        
+  </Router>
+             
+     
       </div>
 
     );
