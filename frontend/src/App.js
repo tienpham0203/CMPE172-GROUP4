@@ -19,18 +19,15 @@ class App extends Component {
 class MyComponents extends Component {
   render() {
     return (
-      <div className="MyCoponents">
-         
+      <div className="MyCoponents">    
                 
        <Router>
       <>
       <Route path="/" exact component={UploadToS3}/>
-    
-   
+      
       </>
-  </Router>
-             
-     
+        </Router>
+        
       </div>
 
     );
