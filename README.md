@@ -1,5 +1,6 @@
 # CMPE172-GROUP4###
 Installation:
+cd to frontend folder:
 `npm install`
 
 Subscription:
