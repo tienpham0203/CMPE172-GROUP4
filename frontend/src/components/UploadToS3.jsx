@@ -1,7 +1,9 @@
 import S3 from 'react-aws-s3';
-import React, { Component, Button } from "react";
+import React, { Component} from "react";
+import upload from './upload.css';
 import AudioPlayer from 'react-h5-audio-player';
 import AWS from 'aws-sdk';
+import axios from 'axios';
 //import { Readable } from "stream";
 const config = {
     bucketName: process.env.REACT_APP_BUCKET_NAME,
@@ -20,20 +22,41 @@ class UploadToS3 extends Component {
         this.state = {
             fileName: '',
             url: "",
-            newNameToSave: ''
+            newNameToSave: '',
+            message: ""
         }
       this.handleClicked = this.handleClicked.bind(this);
     }
 
-    handleClicked(){
+    componentDidMount = () => {
+       console.log("COmponent did mount in uploadto s3") ;
 
+    }
+    handleClicked(){
+        
     }
   
     upload = async (e) => {
 
         const reader = new FileReader();
-        const newName = e.target.files[0].fileName
+        const newName = e.target.files[0].name;
 
+        console.log(newName);
+        const url2 ="http://localhost:9000/api/blog/save?url="+newName;
+        axios.post(
+         url2,{
+             timeout: 4000
+         }
+        ).then(
+            res => {
+                console.log(res);
+            }
+        ).catch(
+            err => {
+                console.log(err.message);
+            }
+        )
+ 
         ReactS3Client.uploadFile(e.target.files[0],newName )
         .then(data=>{
             console.log(data)
@@ -68,8 +91,10 @@ class UploadToS3 extends Component {
                       
                     })
 
+               
 
-
+                     // UPLOAD TO BACK
+     
                 }
             })
 
@@ -81,20 +106,21 @@ class UploadToS3 extends Component {
     }
     render() {
         const urlLink = this.state.url;
+      //  const myMessage =  this.state.message;
         console.log(urlLink);
         return (
             <div>
                 <div>
-                    <h3>AWS Polly Demo</h3>
-            
-                    <input
+                    <h1 className='title'>Be My Speaker</h1>
+                  <input 
                         type='file'
                         onChange={this.upload}
                     />
+                 
                     {/* <Link to={`result?url=${urlLink}`}>Go to Result page</Link> */}
                   </div>
                 <div className="jumbotron text-center">
-                    <h3>Replay</h3>
+                    <h3>Replay here</h3>
                     <AudioPlayer
                         src={urlLink}
                         onPlay={e => console.log("onPlay")} />
