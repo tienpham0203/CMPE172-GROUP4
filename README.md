@@ -1,6 +1,12 @@
 # CMPE172-GROUP4###
+Installation:
+`npm install`
+
+Subscription:
+You need AWS account for this app.
+
 how to run react:
-npm install
+
  `npm start`
 
 Runs the app in the development mode.\
