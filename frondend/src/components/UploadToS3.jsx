@@ -133,11 +133,6 @@ class UploadToS3 extends Component {
         )
     }
 }
-<<<<<<< HEAD
-export default UploadToS3
-=======
+
 export default UploadToS3
 
-
-
->>>>>>> ui3
