@@ -1,4 +1,5 @@
 # CMPE172-GROUP4###
+Please go to this repo for the cleaned up code https://github.com/tienpham0203/CMPE-172---GROUP-4.git
 Installation:
 cd to frontend folder:
 `npm install`
